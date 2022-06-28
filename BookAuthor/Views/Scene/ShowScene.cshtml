@@ -1,0 +1,30 @@
+﻿@model BookAuthor.Models.SceneViewModel
+
+@{
+    ViewBag.Title = Model.Name;
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <div style="text-align:center">
+        <h1 class="text-white">@Model.Name</h1>
+    </div>
+    <form asp-action="ShowScene" asp-controller="Scene" asp-route-id="@Model.Id">
+        <div class="row">
+            <div class="col">
+                <p><img style='width:500px; height:800px;' src="@Url.Content(Model.ImagePath)" /></p>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label asp-for="Name" class="control-label p-1 text-white"></label>
+                    <label class="control-label p-1 text-white"> @Model.Name</label>
+                </div>
+                <div class="row">
+                    <label asp-for="Description" class="control-label p-1 text-white"></label>
+                    <label class="control-label p-1 text-white"> @Model.Description</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,52 @@
+﻿@model BookAuthor.Models.CharacterViewModel
+
+@{
+    ViewBag.Title = "Редактирование персонажа";
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <form asp-action="EditCharacter" asp-controller="Character" asp-route-id="@Model.Id" enctype="multipart/form-data">
+        <div class="form-group p-1">
+            <p><img style='width:500px; height:800px;' src="@Url.Content(Model.ImagePath)" /></p>
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="Name" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="Name" class="form-control text-dark" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="FullName" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="FullName" class="form-control text-dark" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="Description" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="Description" class="form-control text-black-50" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="Age" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="Age" class="form-control text-black-50" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="Gender" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="Gender" class="form-control text-black-50" />
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="History" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="History" class="form-control text-black-50" />
+            <span asp-validation-for="History" class="text-danger"></span>
+        </div>
+        <p>
+            <label class="text-white">Изображение:</label>
+            <input class="form-control-file" type="file" style="color:white" name="Image" /><br>
+        </p>
+        <div class="form-group p-1">
+            <input class="btn btn-dark" type="submit" value="Сохранить" />
+        </div>
+    </form>
+</body>

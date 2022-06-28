@@ -1,0 +1,25 @@
+﻿@model BookAuthor.Models.Scene
+
+@{
+    ViewData["Title"] = "Удаление места действия";
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <div>
+        <dl class="dl-horizontal">
+            <dt class="text-white">Наименование удаляемой сцены:</dt>
+            <dd class="text-white">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <form asp-controller="Scene" asp-action="DeleteScene" method="post">
+            <div class="form-group">
+                <input class="btn btn-dark" type="submit" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</body>

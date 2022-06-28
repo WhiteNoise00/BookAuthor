@@ -1,0 +1,25 @@
+﻿@model BookAuthor.Models.Event
+
+@{
+    ViewBag.Title = "Удаление события";
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <div>
+        <dl class="dl-horizontal">
+            <dt class="text-white">Наименование удаляемого события:</dt>
+            <dd class="text-white">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <form asp-controller="Event" asp-action="DeleteEvent" method="post">
+            <div class="form-group">
+                <input class="btn btn-dark" type="submit" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</body>

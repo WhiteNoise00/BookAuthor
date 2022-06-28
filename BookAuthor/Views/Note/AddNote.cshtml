@@ -1,0 +1,24 @@
+﻿@model BookAuthor.Models.Note
+
+@{
+    ViewBag.Title = "Добавление заметки";
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <form asp-action="AddNote" asp-controller="Note">
+        <div class="form-group p-1">
+            <label asp-for="Name" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-group p-1">
+            <label asp-for="Text" class="control-label p-1 text-white"></label>
+            <textarea asp-for="Text" class="form-control" rows="8"></textarea>
+            <span asp-validation-for="Text" class="text-danger"></span>
+        </div>
+        <div class="form-group p-1">
+            <input class="btn btn-dark" type="submit" value="Сохранить" />
+        </div>
+    </form>
+</body>

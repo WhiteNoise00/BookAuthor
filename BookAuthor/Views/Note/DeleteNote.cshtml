@@ -1,0 +1,25 @@
+﻿@model BookAuthor.Models.Note
+
+@{
+    ViewBag.Title = "Удаление заметки";
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <div>
+        <dl class="dl-horizontal">
+            <dt class="text-white">Наименование удаляемой заметки:</dt>
+            <dd class="text-white">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <form asp-controller="Note" asp-action="DeleteNote" method="post">
+            <div class="form-group">
+                <input class="btn btn-dark" type="submit" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</body>

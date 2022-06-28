@@ -1,0 +1,19 @@
+﻿
+@model BookAuthor.Models.Note
+
+@{
+    ViewBag.Title = Model.Name;
+}
+<head>
+    <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body class="gradient">
+    <div class="form-group p-1">
+        <form asp-action="ReadNote" asp-controller="Note" asp-route-id="@Model.Id">
+            <div class="form-group p-1">
+                <label asp-for="Text" class="control-label p-1 text-white"></label>
+                <textarea asp-for="Text" readonly rows="100" cols="140"></textarea>
+            </div>
+        </form>
+    </div>
+</body>
