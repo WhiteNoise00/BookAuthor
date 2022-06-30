@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<BookAuthor.Models.Character>
 
 @{
-    ViewBag.Title = "Все персонажи";
+    ViewBag.Title = "All characters";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
 </head>
 <body class="gradient">
-    <p><a style="color:white" asp-action="AddCharacter" asp-controller="Character"> Добавить персонажа:</a></p>
+    <p><a style="color:white" asp-action="AddCharacter" asp-controller="Character"> Add a new character:</a></p>
     <table class="table table-bordered " border="1" width=40%>
         <thead style="background-color:black">
             <tr>
-                <th class="text-white">Имя:</th>
-                <th class="text-white">Краткое описание:</th>
-                <th class="text-white">Действия:</th>
+                <th class="text-white">Name:</th>
+                <th class="text-white">Short description:</th>
+                <th class="text-white">Actions:</th>
             </tr>
         </thead>
         <tbody>

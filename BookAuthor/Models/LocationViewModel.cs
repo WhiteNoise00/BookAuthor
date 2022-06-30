@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace BookAuthor.Models
 {
-    public class SceneViewModel
+    public class LocationViewModel
     {
         public int Id { get; set; }
 
-        [Display(Name = "Название места действия:")]
+        [Display(Name = "Location name:")]
         [StringLength(120)]
-        [Required(ErrorMessage = "Введите наименование места:")]
+        [Required(ErrorMessage = "Enter the name of the place:")]
         public string Name { get; set; }
 
-        [Display(Name = "Краткое писание:")]
+        [Display(Name = "Short description:")]
         [StringLength(200)]
-        [Required(ErrorMessage = "Введите описание:")]
+        [Required(ErrorMessage = "Enter a description:")]
         public string Description { get; set; }
 
-        [Display(Name = "Изображение места:")]
+        [Display(Name = "Location Image:")]
         public IFormFile Image { get; set; }
         public string ImagePath { get; set; }
 

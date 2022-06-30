@@ -16,10 +16,6 @@ namespace BookAuthor.Interfaces
         Task ChapterEditContentAsync(Chapter chapter);
         void ChapterEdit(Chapter chapter);
         void ChapterDelete(Chapter chapter);
-        //Chapter ChapterGet(int id);
-        //IEnumerable<Chapter> ChaptersGetAll();
-        //void ChapterEditContent(Chapter chapter);
-
 
 
         /*Working with object "Character"*/
@@ -30,12 +26,12 @@ namespace BookAuthor.Interfaces
         void CharacterDelete(Character character);
 
 
-        /*Working with object "Scene"*/
-        void SceneCreate(Scene scene);
-        Scene SceneGet(int id);
-        Task<List<Scene>> ScenesGetAllAsync();
-        void SceneEdit(Scene scene);
-        void SceneDelete(Scene scene);
+        /*Working with object "Location"*/
+        void LocationCreate(Location location);
+        Location LocationGet(int id);
+        Task<List<Location>> LocationsGetAllAsync();
+        void LocationEdit(Location location);
+        void LocationDelete(Location location);
 
 
         /*Working with object "Event"*/

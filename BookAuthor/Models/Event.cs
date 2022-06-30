@@ -10,14 +10,14 @@ namespace BookAuthor.Models
     {
         public int Id { get; set; }
         
-        [Display(Name = "Название события:")]
+        [Display(Name = "Event name:")]
         [StringLength(120)]
-        [Required(ErrorMessage = "Введите наименование события:")]
+        [Required(ErrorMessage = "Enter the name of the event:")]
         public string Name { get; set; }
         
-        [Display(Name = "Краткое писание:")]
+        [Display(Name = "Short description:")]
         [StringLength(200)]
-        [Required(ErrorMessage = "Введите описание события:")]
+        [Required(ErrorMessage = "Enter a description for the event:")]
         public string Description { get; set; }
 
     }

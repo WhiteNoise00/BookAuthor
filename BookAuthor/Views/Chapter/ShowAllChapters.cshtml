@@ -2,27 +2,27 @@
 @model IEnumerable<BookAuthor.Models.Chapter>
 
 @{
-    ViewBag.Title = "Все главы";
+    ViewBag.Title = "All chapters";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
 </head>
 <body class="gradient">
-    <p><a style="color:white" asp-action="AddChapter" asp-controller="Chapter">Добавить главу:</a></p>
+    <p><a style="color:white" asp-action="AddChapter" asp-controller="Chapter">Adding a new chapter:</a></p>
     <table class="table table-bordered" border="1" width=40%>
         <thead style="background-color:black">
             <tr>
-                <th class="text-white">Глава:</th>
-                <th class="text-white">Описание:</th>
-                <th class="text-white">Автор:</th>
-                <th class="text-white">Действия:</th>
+                <th class="text-white">Chapter:</th>
+                <th class="text-white">Description:</th>
+                <th class="text-white">Author:</th>
+                <th class="text-white">Actions:</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td><a style="color:white" asp-action="ReadChapter" asp-controller="Chapter" asp-route-id="@item.Id">@item.Name</a></td>
+                    <td><a style="color:white" asp-action="ReadChapter" asp-controller="Chapter" asp-route-id="@item.Id">@item.Title</a></td>
                     <td class="text-white">@item.Description</td>
                     <td class="text-white">@item.Author</td>
                     <td>

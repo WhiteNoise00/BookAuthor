@@ -11,34 +11,34 @@ namespace BookAuthor.Models
     {
         public int Id { get; set; }      
 
-        [Display(Name = "Имя:")]
-        [Required(ErrorMessage = "Введите имя персонажа:")]
+        [Display(Name = "Character`s name:")]
+        [Required(ErrorMessage = "Enter character name:")]
         [StringLength(200)]
         public string Name { get; set; }
 
-        [Display(Name = "Полное имя персонажа:")]
-        [Required(ErrorMessage = "Введите полное имя персонажа:")]
+        [Display(Name = "Full character name:")]
+        [Required(ErrorMessage = "Enter the full name of the character:")]
         [StringLength(200)]
         public string FullName { get; set; }
 
-        [Display(Name = "Возраст:")]
-        [Required(ErrorMessage = "Введите возраст:")]
+        [Display(Name = "Age:")]
+        [Required(ErrorMessage = "Enter age:")]
         [StringLength(100)]
         public string Age { get; set; }
 
-        [Required(ErrorMessage = "Введите пол персонажа:")]
-        [Display(Name = "Пол персонажа:")]
+        [Display(Name = "Character gender:")]
+        [Required(ErrorMessage = "Enter character gender:")] 
         public string Gender { get; set; }
 
-        [Display(Name = "Изображение персонажа:")]
+        [Display(Name = "Character Image:")]
         public IFormFile Image { get; set; }
 
-        [Display(Name = "Краткое описание:")]
-        [Required(ErrorMessage = "Введите краткое описание:")]
-        [StringLength(300)]
+        [Display(Name = "Short description:")]
+        [Required(ErrorMessage = "Short description:")]
+        [StringLength(200)]
         public string Description { get; set; }
 
-        [Display(Name = "История персонажа:")]
+        [Display(Name = "Character history:")]
         [StringLength(3000)]
         public string History { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookAuthor.Models
 {
-    public class Scene
+    public class Location
     {
         public int Id { get; set; }
        

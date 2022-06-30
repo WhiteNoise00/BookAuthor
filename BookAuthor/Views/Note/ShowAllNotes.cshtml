@@ -1,20 +1,20 @@
 ﻿@model IEnumerable<BookAuthor.Models.Note>
 
 @{
-    ViewBag.Title = "Все заметки";
+    ViewBag.Title = "All Notes";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
 </head>
 <body class="gradient">
 
-    <p><a style="color:white" asp-action="AddNote" asp-controller="Note">Добавить заметку:</a></p>
+    <p><a style="color:white" asp-action="AddNote" asp-controller="Note">Add a new note:</a></p>
     <table align="center" class="table table-bordered " border="1" width=40%>
         <thead style="background-color:black">
             <tr>
-                <th class="text-white">Наименование:</th>
-                <th class="text-white">Содержимое:</th>
-                <th class="text-white">Действия:</th>
+                <th class="text-white">Name:</th>
+                <th class="text-white">Content:</th>
+                <th class="text-white">Actions:</th>
             </tr>
         </thead>
         <tbody>
@@ -23,7 +23,7 @@
 
                 <tr>
                     <td><a style="color:white" asp-action="ReadNote" asp-controller="Note" asp-route-id="@item.Id">@item.Name</a></td>
-                    <td><textarea style="color:white; background:none" crows="20" cols="125" name="text" class="border-0">@item.Text</textarea></td>
+                    <td><textarea style="color:white; background:none" crows="20" cols="125" name="text" class="border-0">@item.Content</textarea></td>
                     <td>
                         <ul>
                             <li>

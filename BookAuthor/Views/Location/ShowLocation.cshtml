@@ -1,5 +1,4 @@
-﻿@model BookAuthor.Models.SceneViewModel
-
+﻿@model BookAuthor.Models.LocationViewModel
 @{
     ViewBag.Title = Model.Name;
 }
@@ -10,7 +9,7 @@
     <div style="text-align:center">
         <h1 class="text-white">@Model.Name</h1>
     </div>
-    <form asp-action="ShowScene" asp-controller="Scene" asp-route-id="@Model.Id">
+    <form asp-action="ShowLocation" asp-controller="Location" asp-route-id="@Model.Id">
         <div class="row">
             <div class="col">
                 <p><img style='width:500px; height:800px;' src="@Url.Content(Model.ImagePath)" /></p>

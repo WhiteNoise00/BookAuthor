@@ -1,7 +1,7 @@
 ﻿@model BookAuthor.Models.Character
 
 @{
-    ViewBag.Title = "Удаление персонажа";
+    ViewBag.Title = "Delete character";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -9,7 +9,7 @@
 <body class="gradient">
     <div>
         <dl class="dl-horizontal">
-            <dt class="text-white">Наименование удаляемого персонажа:</dt>
+            <dt class="text-white">The name of the character to be deleted:</dt>
             <dd class="text-white">
                 @Html.DisplayFor(model => model.Name)
             </dd>
@@ -18,7 +18,7 @@
     <div>
         <form asp-controller="Character" asp-action="DeleteCharacter" method="post">
             <div class="form-group">
-                <input class="btn btn-dark" type="submit" value="Удалить" />
+                <input class="btn btn-dark" type="submit" value="Delete" />
             </div>
         </form>
     </div>

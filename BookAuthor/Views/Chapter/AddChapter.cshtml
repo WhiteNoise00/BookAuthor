@@ -1,7 +1,7 @@
 ﻿@model BookAuthor.Models.Chapter
 
 @{
-    ViewBag.Title = "Добавление новой главы";
+    ViewBag.Title = "Adding a new chapter";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -9,9 +9,9 @@
 <body class="gradient">
     <form asp-action="AddChapter" asp-controller="Chapter">
         <div class="form-group p-1">
-            <label asp-for="Name" class="control-label p-1 text-white"></label>
-            <input type="text" asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
+            <label asp-for="Title" class="control-label p-1 text-white"></label>
+            <input type="text" asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
         </div>
 
         <div class="form-group p-1">
@@ -26,7 +26,7 @@
             <span asp-validation-for="Author" class="text-danger"></span>
         </div>
         <div class="form-group p-1">
-            <input type="submit" class="btn btn-dark" value="Сохранить" />
+            <input type="submit" class="btn btn-dark" value="Save" />
         </div>
     </form>
 </body>

@@ -1,13 +1,13 @@
-﻿@model BookAuthor.Models.SceneViewModel
+﻿@model BookAuthor.Models.LocationViewModel
 
 @{
-    ViewBag.Title = "Редактирование места действия";
+    ViewBag.Title = "Editing the scene";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
 </head>
 <body class="gradient">
-    <form asp-action="EditScene" asp-controller="Scene" asp-route-id="@Model.Id" enctype="multipart/form-data">
+    <form asp-action="EditLocation" asp-controller="Location" asp-route-id="@Model.Id" enctype="multipart/form-data">
         <div class="form-group p-1">
             <label asp-for="Name" class="control-label p-1 text-white"></label>
             <input type="text" asp-for="Name" class="form-control" />
@@ -19,13 +19,13 @@
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
         <div>
-            <label class="text-white">Изображение:</label>
+            <label class="text-white">Image:</label>
         </div>
         <div class="form-group p-1">
             <input class="form-control-file" type="file" style="color:white" name="Image" />
         </div>
         <div class="form-group p-1">
-            <input class="btn btn-dark" type="submit" value="Сохранить" />
+            <input class="btn btn-dark" type="submit" value="Save" />
         </div>
     </form>
 </body>

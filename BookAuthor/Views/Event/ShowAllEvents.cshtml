@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<BookAuthor.Models.Event>
 
 @{
-    ViewBag.Title = "Все события";
+    ViewBag.Title = "All events";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
 </head>
 <body class="gradient">
-    <p><a style="color:white" asp-action="AddEvent" asp-controller="Event">Добавить событие:</a></p>
+    <p><a style="color:white" asp-action="AddEvent" asp-controller="Event">Add a new event:</a></p>
     <table class="table table-bordered " border="1" width=40%>
         <thead style="background-color:black">
             <tr>
-                <th class="text-white">Наименование:</th>
-                <th class="text-white">Описание:</th>
-                <th class="text-white">Действия:</th>
+                <th class="text-white">Name:</th>
+                <th class="text-white">Description:</th>
+                <th class="text-white">Actions:</th>
             </tr>
         </thead>
         <tbody>

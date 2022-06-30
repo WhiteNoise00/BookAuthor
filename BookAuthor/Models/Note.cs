@@ -10,15 +10,15 @@ namespace BookAuthor.Models
     {
         public int Id { get; set; }
 
-        [Display(Name = "Наименование заметки:")]
-        [Required(ErrorMessage = "Имя не должно быть пустым и превышать 120 символов.")]
+        [Display(Name = "Note name:")]
+        [Required(ErrorMessage = "The name must not be empty and must not exceed 120 characters:")]
         [MaxLength(120)]
         public string Name { get; set; }
 
-        [Display(Name = "Содержание:")]
-        [Required(ErrorMessage = "Содержание не должно быть пустым и превышать 3000 символов.")]
+        [Display(Name = "Content:")]
+        [Required(ErrorMessage = "Content must not be empty and must not exceed 3000 characters:")]
         [MaxLength(3000)]
-        public string Text{ get; set; }
+        public string Content{ get; set; }
 
     }
 }

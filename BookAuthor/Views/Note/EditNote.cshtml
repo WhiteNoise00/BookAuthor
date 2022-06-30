@@ -1,7 +1,7 @@
 ﻿@model BookAuthor.Models.Note
 
 @{
-    ViewBag.Title = "Редактирование заметки";
+    ViewBag.Title = "Editing a note";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -14,12 +14,12 @@
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         <div class="form-group p-1">
-            <label asp-for="Text" class="control-label p-1 text-white"></label>
-            <textarea asp-for="Text" class="form-control" rows="100" cols="140"></textarea>
-            <span asp-validation-for="Text" class="text-danger"></span>
+            <label asp-for="Content" class="control-label p-1 text-white"></label>
+            <textarea asp-for="Content" class="form-control" rows="100" cols="140"></textarea>
+            <span asp-validation-for="Content" class="text-danger"></span>
         </div>
         <div class="form-group p-1">
-            <input class="btn btn-dark" type="submit" value="Сохранить" />
+            <input class="btn btn-dark" type="submit" value="Save" />
         </div>
     </form>
 </body>

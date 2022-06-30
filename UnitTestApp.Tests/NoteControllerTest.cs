@@ -17,9 +17,9 @@ namespace UnitTestApp.Tests
         {
             var notes = new List<Note>
             {
-                new Note { Id=1, Name="First", Text="1"},
-                new Note { Id=2, Name="Second", Text="2"},
-                new Note { Id=3, Name="Third", Text="3"}
+                new Note { Id=1, Name="First", Content="1"},
+                new Note { Id=2, Name="Second", Content="2"},
+                new Note { Id=3, Name="Third", Content="3"}
             };
             return notes;
         }
@@ -61,7 +61,7 @@ namespace UnitTestApp.Tests
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<Note>(viewResult.ViewData.Model);
             Assert.Equal("First", model.Name);
-            Assert.Equal("1", model.Text);
+            Assert.Equal("1", model.Content);
             Assert.Equal(testNoteId, model.Id);
         }
 
@@ -91,7 +91,7 @@ namespace UnitTestApp.Tests
             Note new_note = new Note { 
                 Id= testNoteId,
                 Name="New Note",
-                Text="Some Idea"
+                Content="Some Idea"
             };
             var mock = new Mock<IRepository>();
 

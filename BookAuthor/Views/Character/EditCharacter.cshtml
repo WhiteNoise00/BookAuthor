@@ -1,7 +1,7 @@
 ﻿@model BookAuthor.Models.CharacterViewModel
 
 @{
-    ViewBag.Title = "Редактирование персонажа";
+    ViewBag.Title = "Character editing";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -42,11 +42,11 @@
             <span asp-validation-for="History" class="text-danger"></span>
         </div>
         <p>
-            <label class="text-white">Изображение:</label>
+            <label class="text-white">Image:</label>
             <input class="form-control-file" type="file" style="color:white" name="Image" /><br>
         </p>
         <div class="form-group p-1">
-            <input class="btn btn-dark" type="submit" value="Сохранить" />
+            <input class="btn btn-dark" type="submit" value="Save" />
         </div>
     </form>
 </body>

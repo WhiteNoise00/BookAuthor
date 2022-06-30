@@ -2,7 +2,7 @@
 @model BookAuthor.Models.Chapter
 
 @{
-    ViewBag.Title = "Редактирование содержимого главы";
+    ViewBag.Title = "Chapter Content Editing";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -10,11 +10,11 @@
 <body class="gradient">
     <form asp-action="EditChapterContent" asp-controller="Chapter" asp-route-id="@Model.Id">
         <div class="form-group p-1">
-            <label asp-for="Text" class="control-label p-1 text-white"></label>
-            <textarea asp-for="Text" rows="100" cols="140"></textarea>
+            <label asp-for="Content" class="control-label p-1 text-white"></label>
+            <textarea asp-for="Content" rows="100" cols="140"></textarea>
         </div>
         <div class="form-group p-1">
-            <input type="submit" class="btn btn-dark" value="Сохранить" />
+            <input type="submit" class="btn btn-dark" value="Save" />
         </div>
     </form>
 </body>

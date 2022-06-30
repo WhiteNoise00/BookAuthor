@@ -1,6 +1,6 @@
 ﻿@model BookAuthor.Models.Chapter
 @{
-    ViewBag.Title = "Удаление главы";
+    ViewBag.Title = "Deleting the chapter";
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -8,16 +8,16 @@
 <body class="gradient">
     <div>
         <dl class="dl-horizontal">
-            <dt class="text-white">Наименование удаляемой главы (Будет удалена вместе со всеми страницами):</dt>
+            <dt class="text-white">Name of the chapter to be deleted:</dt>
             <dd class="text-white">
-                @Html.DisplayFor(model => model.Name)
+                @Html.DisplayFor(model => model.Title)
             </dd>
         </dl>
     </div>
     <div>
         <form asp-controller="Chapter" asp-action="DeleteChapter" method="post">
             <div class="form-group ">
-                <input type="submit" class=" btn btn-dark" value="Удалить" />
+                <input type="submit" class=" btn btn-dark" value="Delete" />
             </div>
         </form>
     </div>

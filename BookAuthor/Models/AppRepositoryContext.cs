@@ -31,14 +31,14 @@ namespace BookAuthor.Models
 
         public async Task<List<Chapter>> ChaptersGetAllAsync()
         {
-            return await db.Chapters.OrderBy(c => c.Name).ToListAsync();
+            return await db.Chapters.OrderBy(c => c.Title).ToListAsync();
         }
 
         public void ChapterEdit(Chapter chapter)
         {
             Chapter ch= db.Chapters.FirstOrDefault(e => e.Id == chapter.Id);
-            ch.Name = chapter.Name;
-            ch.Text = chapter.Text;
+            ch.Title = chapter.Title;
+            ch.Content = chapter.Content;
             ch.Author = chapter.Author;
             ch.Description = chapter.Description;
             db.Chapters.Update(ch);
@@ -48,7 +48,7 @@ namespace BookAuthor.Models
         public async Task ChapterEditContentAsync(Chapter chapter)
         {
             Chapter ch = await db.Chapters.FirstOrDefaultAsync(e => e.Id == chapter.Id);
-            ch.Text = chapter.Text;
+            ch.Content = chapter.Content;
             db.Chapters.Update(ch);
             await db.SaveChangesAsync();
         }
@@ -91,31 +91,31 @@ namespace BookAuthor.Models
         }
 
 
-        /*Working with object "Scene"*/
-        public async Task<List<Scene>> ScenesGetAllAsync()
+        /*Working with object "Location"*/
+        public async Task<List<Location>> LocationsGetAllAsync()
         {
-            return await db.Scenes.OrderBy(c => c.Name).ToListAsync();
+            return await db.Locations.OrderBy(c => c.Name).ToListAsync();
         }
 
-        public Scene SceneGet(int id)
+        public Location LocationGet(int id)
         {
-            return db.Scenes.FirstOrDefault(i=>i.Id==id);
+            return db.Locations.FirstOrDefault(i=>i.Id==id);
         }
 
-        public void SceneEdit(Scene scene)
+        public void LocationEdit(Location location)
         {
-            db.Scenes.Update(scene);
+            db.Locations.Update(location);
             db.SaveChanges();
         }
 
-        public void SceneCreate(Scene scene)
+        public void LocationCreate(Location location)
         {
-            db.Scenes.Add(scene);
+            db.Locations.Add(location);
             db.SaveChanges();
         }
-        public void SceneDelete(Scene scene)
+        public void LocationDelete(Location location)
         {
-            db.Scenes.Remove(scene);
+            db.Locations.Remove(location);
             db.SaveChanges();
         }
 

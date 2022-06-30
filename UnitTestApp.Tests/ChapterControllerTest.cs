@@ -17,10 +17,10 @@ namespace UnitTestApp.Tests
         {
             var chapters = new List<Chapter>
             {
-                new Chapter { Id=1, Author="Author", Name="First", Description="1", Text="Hello World!"},
-                new Chapter { Id=2, Author="Author", Name="Second", Description="1", Text="Some text"},
-                new Chapter { Id=3, Author="Author 2", Name="Thirth", Description="2", Text="My biography"},
-                new Chapter { Id=4, Author="Author 2", Name="Fourth", Description="2", Text="New history"}
+                new Chapter { Id=1, Author="Author", Title="First", Description="1", Content="Hello World!"},
+                new Chapter { Id=2, Author="Author", Title="Second", Description="1", Content="Some text"},
+                new Chapter { Id=3, Author="Author 2", Title="Thirth", Description="2", Content="My biography"},
+                new Chapter { Id=4, Author="Author 2", Title="Fourth", Description="2", Content="New history"}
             };
             return chapters;
         }
@@ -61,7 +61,7 @@ namespace UnitTestApp.Tests
             // Assert
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<Chapter>(viewResult.ViewData.Model);
-            Assert.Equal("First", model.Name);
+            Assert.Equal("First", model.Title);
             Assert.Equal("Author", model.Author);
             Assert.Equal("1", model.Description);
             Assert.Equal(testChapterId, model.Id);
@@ -101,7 +101,7 @@ namespace UnitTestApp.Tests
             // Assert
             var viewResult = Assert.IsType<ViewResult>(result);
             var model = Assert.IsType<Chapter>(viewResult.ViewData.Model);
-            Assert.Equal("First", model.Name);
+            Assert.Equal("First", model.Title);
             Assert.Equal("Author", model.Author);
             Assert.Equal("1", model.Description);
             Assert.Equal(testChapterId, model.Id);
@@ -115,10 +115,10 @@ namespace UnitTestApp.Tests
             int testChapterId = 1;
             Chapter new_chapter = new Chapter { 
                 Id=  testChapterId,
-                Name ="Chapter 2",
+                Title ="Chapter 2",
                 Description="New Chapter",
                 Author="New Author",
-                Text = "New Text"
+                Content = "New Text"
             };
             var mock = new Mock<IRepository>();
 
@@ -142,10 +142,10 @@ namespace UnitTestApp.Tests
             Chapter new_chapter = new Chapter
             {
                 Id = testChapterId,
-                Name = "Chapter 2",
+                Title = "Chapter 2",
                 Description = "New Chapter",
                 Author = "Author",
-                Text = "Hello World!"
+                Content = "Hello World!"
             };
             var mock = new Mock<IRepository>();
 

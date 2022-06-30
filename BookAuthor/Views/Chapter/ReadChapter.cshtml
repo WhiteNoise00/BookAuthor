@@ -2,18 +2,18 @@
 @model BookAuthor.Models.Chapter
 
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.Title;
 }
 <head>
     <link href="@Url.Content("~/wwwroot/css/Site.css")" rel="stylesheet" type="text/css" />
 </head>
 <body class="gradient">
-    <a style="color:white" asp-action="EditChapterContent" asp-controller="Chapter" asp-route-id="@Model.Id">Редактировать содержимое главы:</a>
+    <a style="color:white" asp-action="EditChapterContent" asp-controller="Chapter" asp-route-id="@Model.Id">Edit content:</a>
     <div class="form-group p-1">
         <form asp-action="ReadChapter" asp-controller="Chapter" asp-route-id="@Model.Id">
             <div class="form-group p-1">
-                <label asp-for="Text" class="control-label p-1 text-white"></label>
-                <textarea asp-for="Text" class="form-control" rows="100" cols="140"></textarea>
+                <label asp-for="Content" class="control-label p-1 text-white"></label>
+                <textarea asp-for="Content" class="form-control" rows="100" cols="140"></textarea>
             </div>
         </form>
     </div>

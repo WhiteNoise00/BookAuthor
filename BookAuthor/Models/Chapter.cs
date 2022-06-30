@@ -10,23 +10,23 @@ namespace BookAuthor.Models
     {
         public int Id { get; set; }
         
-        [Display(Name = "Название главы:")]
+        [Display(Name = "Chapter title:")]
         [StringLength(120)]
-        [Required(ErrorMessage = "Введите наименование главы:")]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "Enter the title of the chapter:")]
+        public string Title { get; set; }
         
-        [Display(Name = "Краткое писание:")]
+        [Display(Name = "Short description:")]
         [StringLength(200)]
-        [Required(ErrorMessage = "Введите описание:")]
+        [Required(ErrorMessage = "Short description:")]
         public string Description { get; set; }
         
-        [Display(Name = "Автор:")]
+        [Display(Name = "Author:")]
         [StringLength(120)]
-        [Required(ErrorMessage = "Введите имя автора:")]
+        [Required(ErrorMessage = "Enter Author Name:")]
         public string Author { get; set; }
 
-        [Display(Name = "Содержание:")]
-        public string Text { get; set; }     
+        [Display(Name = "Content:")]
+        public string Content { get; set; }     
 
     }
 }
